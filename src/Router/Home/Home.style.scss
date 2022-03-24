@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+
+a {
+    font-family: Cardo Regular;
+    font-size: 20px;
+    line-height: 1.35em;
+    text-transform: none;
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 4px
+}
+
+ul {
+    list-style-type: none;
+    padding: 0%;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    border-radius: 20%;
+    background-color: rgb(83, 83, 83);
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 20%;
+    background-color: rgb(212, 209, 209);
+}

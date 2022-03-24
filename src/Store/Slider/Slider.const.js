@@ -1,0 +1,2 @@
+export const GET_SLIDERLIST = "GET_SLIDERLIST";
+export const POST_SLIDERLIST = "POST_SLIDERLIST";

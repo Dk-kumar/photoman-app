@@ -1,0 +1,40 @@
+.story-container {
+  margin-top: 102vh;
+  .storyImg-one {
+    position: relative;
+    height: auto;
+    width: 35%;
+    top: 4rem;
+    right: 2rem;
+  }
+  .storyImg-two {
+    position: relative;
+    height: auto;
+    z-index: 1;
+    width: 54%;
+    left: 9rem;
+  }
+  .storyImg-three {
+    position: relative;
+    height: auto;
+    z-index: 1;
+    width: 60%;
+    left: 2rem;
+    bottom: 7rem;
+  }
+  .img-strikeout-one {
+    position: relative;
+    width: 30%;
+    z-index: 1;
+    top: 7rem;
+    left: 1rem;
+  }
+  .img-strikeout-two {
+    position: relative;
+    width: 30%;
+    z-index: 1;
+    right: 2.5rem;
+    bottom: 5rem;
+    transform: rotate(260deg);
+  }
+}

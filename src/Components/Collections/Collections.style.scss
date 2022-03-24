@@ -1,0 +1,83 @@
+@import '../../Styles/media.scss';
+
+.collections-container {
+  margin-top: 108vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  @include desktop {
+    padding: 1rem 7rem;
+  }
+  
+  @include desktop {
+    .render-collections {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+      gap: 1rem;
+    }
+  }
+  .heading {
+    display: flex;
+    padding: 1.5rem 0 0;
+    margin-top: -4rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+
+
+    .render-heading .browse {
+      font-family: "Oswald", sans-serif;
+      font-size: 12px;
+      letter-spacing: 6px;
+      font-weight: bolder;
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+    .render-heading .collection {
+      font-family: "Cardo", serif;
+      font-size: 20.8px;
+      @include desktop {
+        font-size: 39px;
+      }
+    }
+
+    .line {
+      height: 1px;
+      background-color: black;
+      width: 100%;
+    }
+  }
+  .collections {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    @include desktop {
+      width: 24.82em;
+      aspect-ratio: 1;
+    }
+    .base-image {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0rem;
+    font-family: Cardo;
+    font-size: 20px;
+    line-height: 1.35em;
+    color: black;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @include desktop {
+      font-size: 30px;
+    }
+  }
+}

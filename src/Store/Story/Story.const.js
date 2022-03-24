@@ -1,0 +1,2 @@
+export const GET_STORYLIST = "GET_STORYLIST";
+export const POST_STORYLIST = "POST_STORYLIST";

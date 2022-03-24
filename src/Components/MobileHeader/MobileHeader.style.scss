@@ -1,0 +1,122 @@
+@media (max-width: 1024px) {
+  .header-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    margin-top: 12%;
+
+    .logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .header-logo {
+        height: 100%;
+        max-width: 75%;
+      }
+    }
+
+    .sidenav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 0%;
+      z-index: 9999;
+      overflow-y: scroll;
+      padding: 1.875rem 0;
+      background-color: #f8f8f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+      transition: 0.3s;
+
+      span {
+        font-size: 14px;
+        display: block;
+        text-transform: uppercase;
+        font-family: Cardo Regular;
+        line-height: 1.35em;
+        font-weight: normal;
+        letter-spacing: 4px;
+        transition: 0.3s;
+      }
+
+      .top-area {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 1.875rem;
+        width: calc(100% - 4rem);
+        margin-bottom: 3.125rem;
+        margin-top: 12%;
+        border-bottom: 1px solid;
+      }
+
+      .bottom-area {
+        width: 100%;
+        padding: 0 4rem;
+        row-gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .flex-grow {
+        flex-grow: 1;
+      }
+
+      .social-icons {
+        padding: 0 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-shrink: 0;
+        transition: width ease 0.5s;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .desktop-header {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .header-container {
+    display: none;
+  }
+  .desktop-header {
+    padding: 4rem 2rem;
+    position: relative;
+    color: #ffff;
+    width: 100%;
+    cursor: pointer;
+    .link-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+      text-transform: uppercase;
+      .link {
+        font-size: 16px;
+        display: block;
+        text-transform: uppercase;
+        font-family: Cardo Regular;
+        line-height: 1.35em;
+        font-weight: normal;
+        letter-spacing: 4px;
+      }
+      .link-logo {
+        max-width: 20%;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
