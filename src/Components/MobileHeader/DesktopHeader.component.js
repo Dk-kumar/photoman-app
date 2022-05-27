@@ -1,23 +1,55 @@
 import React, { Component } from "react";
 import { logo } from "../../Util/Logo";
+import { Link } from "react-router-dom";
 
 class DesktopHeader extends Component {
   state = {};
 
   renderHeader() {
-    const { collections } = this.props;
+    const getURL = this.props.location.pathname;
     return (
       <div className="desktop-header">
-        <ul className="link-container">
-          <li className="link">home</li>
-          <li className="link">about</li>
-          <li className="link">weddings</li>
+        <ul
+          className="link-container"
+          style={
+            getURL === "/"
+              ? { padding: "4rem 2rem" }
+              : { padding: "2rem 1rem", background: "black" }
+          }
+        >
+          <li>
+            <Link className="link" to={"/"}>
+              home
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to={"/about"}>
+              about
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to={"/wedding"}>
+              wedding
+            </Link>
+          </li>
           <li className="link-logo">
             <img src={logo()} alt="logo" />
           </li>
-          <li className="link">baby shower</li>
-          <li className="link">baby shoot</li>
-          <li className="link">contact</li>
+          <li>
+            <Link className="link" to={"/babyshower"}>
+              baby shower
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to={"/babyshoot"}>
+              baby shoot
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to={"/contact"}>
+              contact
+            </Link>
+          </li>
         </ul>
       </div>
     );

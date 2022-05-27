@@ -6,6 +6,7 @@ import CollectionsDispatcher from "../../Store/Collections/Collections.dispatche
 export const mapStateToProps = (state) => ({
   weddingCollections: state.weddingReducer,
   babysShootCollections: state.babysShootReducer,
+  babyShowerCollections: state.babyShowerReducer,
 });
 
 export const mapDispatchToProps = (dispatch) => ({
@@ -13,17 +14,25 @@ export const mapDispatchToProps = (dispatch) => ({
     CollectionsDispatcher.getWeddingCollectionsApi(dispatch),
   getBabysCollectionsApi: () =>
     CollectionsDispatcher.getBabysCollectionsApi(dispatch),
-  postBabysCollectionsApi: () => 
+  postBabysCollectionsApi: () =>
     CollectionsDispatcher.postBabysCollectionsApi(dispatch),
+  getBabyShowerCollectionsApi: () =>
+    CollectionsDispatcher.getBabyShowerCollectionsApi(dispatch),
 });
 
 class CollectionsContainer extends Component {
   state = {};
 
   componentDidMount() {
-    const { getWeddingCollectionsApi, getBabysCollectionsApi } = this.props;
+    const {
+      getWeddingCollectionsApi,
+      getBabysCollectionsApi,
+      getBabyShowerCollectionsApi,
+    } = this.props;
+
     getWeddingCollectionsApi();
     getBabysCollectionsApi();
+    getBabyShowerCollectionsApi();
   }
 
   containerFunctions = {
@@ -41,10 +50,11 @@ class CollectionsContainer extends Component {
     const {
       weddingCollections: { weddings },
       babysShootCollections: { babysShoot },
+      babyShowerCollections: { babyShower },
     } = this.props;
     return (
       <>
-        {babysShoot && weddings &&(
+        {babysShoot && weddings && babyShower && (
           <Collections {...this.props} {...this.containerFunctions} />
         )}
       </>

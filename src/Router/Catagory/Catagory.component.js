@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MobileHeaderContainer from "../../Components/MobileHeader/MobileHeader.container";
+import SupportContainer from "../../Components/Support/Support.container";
 import "./Catagory.style.scss";
 
 class Catagory extends Component {
@@ -77,6 +78,7 @@ class Catagory extends Component {
   render() {
     return (
       <>
+      <SupportContainer />
         <MobileHeaderContainer {...this.props} />
         <div className="catagory-container">
           {this.renderBaseCollections()}

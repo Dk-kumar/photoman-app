@@ -3,6 +3,7 @@ import {
   postWeddingCollections,
   getBabysCollections,
   postBabysCollections,
+  getBabyShowerCollections
 } from "./Collections.action";
 import { endPoints } from "../../Util/Api";
 import { getRequest, postRequest } from "../../Util/ApiRequest";
@@ -26,13 +27,16 @@ class CollecionsDispatcher {
   }
 
   postBabysCollectionsApi(dispatch, data) {
-    debugger
     return postRequest(
       endPoints.babysEndPoint,
       dispatch,
       data,
       postBabysCollections
     );
+  }
+
+  getBabyShowerCollectionsApi(dispath) {
+    return getRequest(endPoints.babyShowerEndPoint, dispath, getBabyShowerCollections)
   }
 }
 

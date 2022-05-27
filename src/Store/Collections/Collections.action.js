@@ -2,7 +2,8 @@ import {
   GET_WEDDING_COLLECTIONS,
   POST_WEDDING_COLLECTIONS,
   GET_BABYS_COLLECTIONS,
-  POST_BABYS_COLLECTIONS
+  POST_BABYS_COLLECTIONS,
+  GET_BABY_SHOWER_COLLECTIONS
 } from "./Collecions.const";
 
 export const getWeddingCollections = (data) => ({
@@ -24,3 +25,9 @@ export const postBabysCollections = (data) => ({
   type: POST_BABYS_COLLECTIONS,
   payload: data,
 });
+
+export const getBabyShowerCollections = (data) => ({
+  type: GET_BABY_SHOWER_COLLECTIONS,
+  payload: data,
+});
+

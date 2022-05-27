@@ -91,7 +91,7 @@
     display: none;
   }
   .desktop-header {
-    padding: 4rem 2rem;
+    // padding: 4rem 2rem;
     position: relative;
     color: #ffff;
     width: 100%;
@@ -104,6 +104,7 @@
       text-transform: uppercase;
       .link {
         font-size: 16px;
+        color: #ffff;
         display: block;
         text-transform: uppercase;
         font-family: Cardo Regular;

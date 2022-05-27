@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import RecentStorysContainer from "../../Router/RecentStorys/RecentStorys.container";
+import SupportContainer from "../Support/Support.container";
 import "./Collections.style.scss";
 
 class Collections extends Component {
@@ -60,11 +61,34 @@ class Collections extends Component {
     );
   }
 
+  renderBabyShowerCollections() {
+    const {
+      babyShowerCollections: { babyShower },
+      handleNavigation,
+    } = this.props;
+    return (
+      <div>
+        <div className="collections">
+          <img
+            className="base-image"
+            src={babyShower[0].catagory[0].images[0].image_url}
+            alt="babyShower"
+            onClick={() => handleNavigation("babyshoot", babyShower)}
+          />
+        </div>
+        <div>
+          <p className="title">{babyShower[0].title}</p>
+        </div>
+      </div>
+    );
+  }
+
   renderCollections() {
     return (
       <div className="render-collections">
         {this.renderWeddingCollections()}
         {this.renderBabysShootCollections()}
+        {this.renderBabyShowerCollections()}
       </div>
     );
   }
@@ -72,6 +96,7 @@ class Collections extends Component {
   render() {
     return (
       <>
+      <SupportContainer />
         <div className="collections-container">
           {this.renderHeading()}
           {this.renderCollections()}

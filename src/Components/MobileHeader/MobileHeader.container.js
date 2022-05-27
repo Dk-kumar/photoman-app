@@ -9,7 +9,7 @@ class MobileHeaderContainer extends Component {
     collections: [
       { type: "home" },
       { type: "about" },
-      { type: "weddings" },
+      { type: "wedding" },
       { type: "baby shower"},
       { type: "baby shoot" },
       { type: "contact" },
@@ -57,7 +57,7 @@ class MobileHeaderContainer extends Component {
     this.findingRouter();
     return (
       <>
-        <DesktopHeader {...this.containerFunction} {...this.state}/>
+        <DesktopHeader {...this.containerFunction} {...this.state} {...this.props}/>
         <MobileHeader {...this.containerFunction} {...this.state} />
       </>
     );

@@ -1,0 +1,1 @@
+export const POST_SIGNIN_DETAILS = "GET_SIGNIN_DETAILS";

@@ -47,7 +47,7 @@ class BannerSliderContainer extends Component {
   handelingInput({ currentTarget: input }) {
     let collectionDetails = { ...this.state.collectionDetails };
     collectionDetails[input.name] = input.value;
-    this.setState({ collectionDetails });
+    this.setState({ collectionDetails },() => console.log(this.state));
   }
 
   handelingForms(e) {
